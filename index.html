@@ -1,0 +1,40 @@
+ <!DOCTYPE html>
+ <html lang="en" ng-app="myApp">
+ <head>
+ <meta charset="UTF-8">
+ 	<title>Demo</title>
+ 	<script src="lib/angular/angular.min.js"> </script>
+ 	<script src="js/controllers.js"></script>
+
+ </head>
+ <body>
+ <h1> Details </h1>
+ <form>
+ <P> Name: </P>
+ First Name: <input type="text" ng-model="firstname"> 
+ <br>
+ <br>
+ Last Name: <input type="text" ng-model="secondname">
+ <br> <br>
+ E-mail ID: <input type="text" ng-model="E-mail ID">
+ <h3> Gender </h3>
+ <input type="radio" ng-model="myVar" value="Male">Male
+<input type="radio" ng-model="myVar" value="Female">Female
+<input type="radio" ng-model="myVar" value="Others">Others
+<br> <br>
+Mobile NO:<input type="text" ng-model="mobile no">
+<br> 
+<h4> Address <h4>
+H.No: <input type="text" ng-model="H.No:">
+Village: <input type="text" ng-model="Village">
+District: <input type="text" ng-model="District">
+<form ng-submit="submit()" ng-controller="ExampleController">
+  <input type="submit" id="submit" value="Submit" />
+  
+</form>
+
+ </form>
+
+ </div>
+ </body>
+ </html>
