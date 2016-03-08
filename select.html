@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<script src="lib/angular/angular.min.js"> </script>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+<p> Which fruit do you like most </p>
+<select ng-model="selectedName" ng-options="x for x in names">
+</select>
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.names = ["Apple", "Orange", "Mango"];
+});
+</script>
+
+<p>The above element shows the drop down selection </p>
+
+</body>
+</html>
