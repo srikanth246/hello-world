@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+	<title>Validation</title>
+	<meta name="viewport" content="width=device-width,user-scalable=no">
+	<link href="https://fonts.goolepis.com/css?family=Lato:400,100,700,900" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="lib/angualr/index.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js">
+	</script>
+	<script src="lib/angular/app.js"></script>
+</head>
+<body>
+<div class ="page">
+     <selection class="card register" ng-app="myApp">
+       <form name="myform" 
+          ng-submit="register()"
+          novalidate>
+<div class="textintro">
+         <h1> Form Validation </h1>
+          <p> please fill out the following </p>
+          <p ng-show="message"> {{ message }} </p>
+
+</div>
+<fieldset>
+	<input type="text" name="firstname"
+	placeholder="First Name"
+	ng-model="user.firstname"
+	ng-required="true"> 
+	<p class="error validationerror" ng-show="myform.
+     firstname.$invalid && myform.firstname.$touched">
+     You must fill out your first name.</p>
+ <br> <br>
+	<input type="text" name="lastname"
+	placeholder="Last Name"
+	ng-model="user.lastname"
+    ng-required="true">
+    <p class="error validationerror" ng-show="myform.
+     lastname.$invalid && myform.lastname.$touched">
+     You must fill out your last name.</p>
+    
+     <br>
+     <br>
+
+
+	<input type="email" name="email"
+	placeholder="Email"
+	ng-model="user.email">
+	<p class="error validationerror" ng-show="myform.
+     email.$invalid && myform.email.$touched">
+     This must be a vaild email.</p>  
+    <br>
+    <br>
+
+	<input type="password" name="password"s
+	placeholder="Password"
+	ng-model="user.password"
+	ng-minlength="6"> 
+    <p class="error validationerror" ng-show="myform.
+     password.$invalid && myform.password.$touched">
+     password must be at least 6 characters</p>
+
+
+</fieldset>
+<button type="submit" class="btn">Submit</button>
+</form>
+</selection>
+</div>
+</body>
+</html>
