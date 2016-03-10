@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html ng-app="simpleApp">  
+<head>
+<meta charset="UTF-8">
+	<title> hai</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="lib/angular/six.js"></script>
+	<link href="lib/angular/six.css" rel="stylesheet">
+</head>
+<body>
+<div ng-controller="simpleController"> 
+
+<form ng-submit="addEntry()">
+<label>Details</label> <br><br>
+Name:<input type="text" ng-model="newData.name" required> <br><br>
+Last Name:<input type="text" ng-model="newData.lastname" required><br><br>
+Age:<input type="number" ng-model="newData.age" required><br><br>
+City:<input type="text" ng-model="newData.city" required><br><br>
+<input type="submit" ng-hide ="modifyField" value="ADD">
+<input type="submit" ng-show ="modifyField" value="UPDATE">
+<button ng-click="reset()">RESET</button>
+ 
+</form>
+<table>
+      <tr>
+      <th>S.No</th>
+      <th> Name</th>
+      <th>Last Name</th>
+      <th>Age</th>
+      <th>City</th>
+      <th colspan="2">Activites</th>
+      </tr>
+<tr ng-repeat="entry in collection"><td>{{$index + 1}}</td>
+
+
+<td>{{entry.name}}</td>
+<td>{{entry.lastname}}</td>
+<td>{{entry.age}}</td>
+<td>{{entry.city}}</td>
+<td>
+
+<input type="button" class="btn btn-primary" value="REMOVE" data-ng-click="removeRow($index)"/>
+</td>
+
+<td><button ng-click="modify(entry)" ng-hide="showDiv">Modify</button></td>
+
+</tr>
+</table>
+ 
+</div>
+</body>
+</html>
