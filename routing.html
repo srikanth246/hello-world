@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> UI-Router </title>
+    
+   <link rel="stylesheet" href="lib/angular/routing.css">
+   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+   <script src="lib/angular/angular-ui-router.js"></script>
+  <script src="lib/angular/routing.js"></script>
+</head>
+
+<body ng-app="myApp">
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="navbar-header">
+  
+    </div>
+    <ul class="nav navbar-nav">
+        <li><a ui-sref="home">  Home  </a></li>
+        <li><a ui-sref="about">About</a></li>
+        <li><a ui-sref="course">Course</a></li>
+        <li><a ui-sref="contact">Contact</a></li>
+    </ul>
+</nav>
+
+
+<div class="container">
+
+   
+    <div ui-view></div>
+
+</div>
+
+</body> 
+  </html>
+  
