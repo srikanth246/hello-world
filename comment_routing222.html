@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Article</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA_Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="scripts/controllers/routing.js"></script>
+<link href="styles/routing.css" rel="stylesheet">
+ <script src="scripts/controllers/angular-ui-router.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+ <script src="scripts/controllers/jquery-2.2.2.min.js"></script>
+        
+          
+</head>
+
+<body ng-app="myApp" ng-controller="HomeCtrl">
+
+  <marquee width="80%">New Article..</marquee>
+<div class="container">
+
+
+<h3> New Article <span class="glyphicon glyphicon-envelope"></span> </h3>
+
+                <hr>
+                 <p><span class="glyphicon glyphicon-time"></span> Posted on March 30, 2016 at 11:00 AM</p>
+                  <hr>
+                    <div class="panel panel-primary">
+                      <div class="panel-heading">
+                         <div>
+                          <h4> Abdulkalam Biography  </h4> 
+                            <h3 class="panel-title">  </h3>
+                             </div>
+                          </div>
+                      <div class="panel-body" >
+                       <p> Avul Pakir Jainulabdeen "A. P. J." Abdul Kalam was the 11th President of India from 2002 to 2007. A career scientist turned politician, Kalam was born and raised in Rameswaram, Tamil Nadu, and studied physics and aerospace engineering. He spent the next four decades as a scientist and science administrator.
+                        </p>
+                       </div>
+                      </div>
+                         <div>
+                           <h3> <span class="label label-warning">Leave a Comment : <span class="glyphicon glyphicon-pencil"> </span> </span> </h3>
+                          </div>
+
+<div class="container" style="margin-top:1%;">
+  <div class="row">
+      <textarea style="width:500px" ng-model="txt" placeholder="Add a comment..."></textarea></br></br>
+      <button type="button" class="btn btn-default" ng-click="postData(txt)" ng-model="btn">post</button>
+  </div>
+</div>
+<div class="container" style="margin-top:1%;">
+  <div class="row">
+      <div ng-show="comment" ng-repeat="data in datas track by $index">
+        {{data}}
+          <div>
+              
+              <a href="#" ng-click="showInnerComment($index)">comment</a>
+             
+          </div>
+           <div ng-show="innerComment">
+               <textarea style="width:500px; height:30px;" ng-model="txt1"></textarea></br></br> 
+               <button type="button" class="btn btn-default" ng-click="postReplied(txt1)" ng-model="btn" ng-show="postRepBtn">Reply</button>
+               <div ng-show="innercmt" ng-repeat="data1 in InnerData">
+                 {{data1}}
+               </div>
+           </div>
+      </div>
+
+  </div>
+</div>      
+
+
+
+<p>Click below for more articles </p>
+
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="navbar-header">
+   
+    </div>
+    <ul class="nav navbar-nav">
+        <li><a ui-sref="article1"> article1 </a></li>
+        <li><a ui-sref="article2"> article2 </a></li>
+       
+    </ul>
+</nav>
+
+<div class="container">
+
+   
+    <div ui-view></div>
+
+</div>
+
+</body> 
+  </html>
+  
