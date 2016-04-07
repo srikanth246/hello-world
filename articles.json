@@ -1,0 +1,25 @@
+ [ 
+     
+
+      {
+        "id": "001",
+        "posted_on" : " 01/04/2016",
+        "title":"Mahatma Gandhi Biography",
+        "description" : "Mohandas Karamchand Gandhi was born on 2 October 1869 to a Hindu Modh Baniya family in Porbandar a coastal town on the Kathiawar Peninsula and then part of the small princely state of Porbandar in the Kathiawar Agency of the Indian Empire."
+      },
+      
+      {
+           "id": "002",
+           "posted_on" : " 01/04/2016",
+           "title":"Jawaharlal Nehru Biography",
+           "description" : " Jawaharlal Nehru was born14 November 1889 – 27 May 1964 was the first Prime Minister of India,central figure in Indian politics before and after independence."
+      },
+
+         {
+        "id": "003",
+        "posted_on" : "01/04/2016",
+        "title":"Abdulkalam Biography ",
+        "description" : "Avul Pakir Jainulabdeen  Abdul Kalam was the 11th President of India from 2002 to 2007. A career scientist turned politician, Kalam was born and raised in Rameswaram, Tamil Nadu and studied physics and aerospace engineering."
+      }
+
+] 

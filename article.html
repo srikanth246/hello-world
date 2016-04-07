@@ -1,0 +1,37 @@
+
+          
+<div class="container">
+                <div id="wrap">
+                    <h3> Article List  </h3>
+                      
+                            <div id ="button">
+                                  <a href="#/article_new" class="btn btn-success" role="button">Create a New Article</a>
+                                  <div class="container">
+                                     <div ui-view></div>
+                                 </div> 
+                            </div>
+                                           <hr>  
+                           <div ng-repeat="article in articles" class="list-group" >
+                              <a  class="list-group-item">
+                                   <h4 class="list-group-item-heading">{{article.title}} - {{article.posted_on}}</h4>
+                                     <p class="list-group-item-text">{{article.description}}</p>
+                                        <div id ="button1">
+                                           <a href="#/article_new1" class="btn btn-success" role="button">Show</a>
+                                        </div>
+
+                                        <div id ="button2">
+                                             <button type="button" ng-click="modify(article)"class="btn btn-primary"   > Edit
+
+                                             </button> 
+                                        </div>
+                                                  
+                                        <div id ="button3">
+                                           <label class="btn btn-warning"   ng-click="remItem($index)">Delete</label> 
+                                        </div>
+                              </a>
+                           </div>
+                   
+              </div>                     
+
+</div>      
+</body>
